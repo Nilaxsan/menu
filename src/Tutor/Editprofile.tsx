@@ -66,7 +66,7 @@ export default function Editprofile() {
         </FormControl>
         <FormControl>
           <Label> Subject</Label>
-          <Select placeholder="Set Grade">
+          <Select placeholder="Set Subject">
             <Option value={9}>Grade 09</Option>
             <Option value={10}>Grade 10</Option>
             <Option value={11}>Grade 11</Option>

@@ -133,6 +133,8 @@ const handleChange: React.ChangeEventHandler<{ name?: string; value: unknown }> 
       //  validation passes, submit the form
       alert("Form submitted successfully!");
     }
+     // If validation passes, continue with form submission
+     console.log({ formValues});
   };
 
   const boxHeight = (firstNameError || lastNameError || gradeError || schoolNameError || addressError || phoneNumberError || emailError || homeTownError) ? 650 : 550;
@@ -183,6 +185,7 @@ const handleChange: React.ChangeEventHandler<{ name?: string; value: unknown }> 
                 </Typography>
               </Box>
               <Box
+              
                 sx={{
                   mt: 2,
                 }}
@@ -212,6 +215,7 @@ const handleChange: React.ChangeEventHandler<{ name?: string; value: unknown }> 
                       onChange={handleChange}
                       error={Boolean(lastNameError)}
                     />
+                    
                     <FormHelperText error>{lastNameError}</FormHelperText>
                   </Grid>
                 </Grid>

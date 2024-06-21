@@ -25,13 +25,13 @@ function isValidEmail(email: string): boolean {
 }
 
 function isValidPassword(password: string): boolean {
-  // Password must be exactly 8 characters long and contain at least one letter, one number, and one special character.
+  // Password strength validation
   const passwordRegex =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return passwordRegex.test(password);
 }
 
-const SignInSide = () => {
+const Conform = () => {
   const [emailError, setEmailError] = React.useState<string>("");
   const [passwordError, setPasswordError] = React.useState<string>("");
 
@@ -40,7 +40,7 @@ const SignInSide = () => {
     const data = new FormData(event.currentTarget);
     const email = data.get("email") as string;
     const password = data.get("password") as string;
-    
+
     // Validate email
     if (!isValidEmail(email)) {
       setEmailError("Please enter a valid email address.");
@@ -243,4 +243,4 @@ const SignInSide = () => {
     </ThemeProvider>
   );
 };
-export default SignInSide;
+export default Conform;

@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignInSide from "./Signin";
+// import Conform from "./conform";
 import Forgot from "./forget";
 import Otp from "./otp";
 import Reset from "./reset";

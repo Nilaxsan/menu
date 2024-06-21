@@ -161,9 +161,9 @@ export default function Sidebar() {
             }}
           >
             <Tooltip title="Notifications">
-              <IconButton aria-label="show 17 new notifications">
+              <IconButton aria-label="show 17 new notifications" >
                 <Badge badgeContent={10} color="error">
-                  <NotificationsIcon sx={{ color: "darkblue", fontSize: 30 }} />
+                  <NotificationsIcon sx={{ color: "darkblue", fontSize: 30 }}  />
                 </Badge>
               </IconButton>
             </Tooltip>
